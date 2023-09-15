@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Usuário</title>
+</head>
+<body>
+<h1>Criar Usuário</h1>
+
+<form action="/users/create" method="post">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="document">Documento (CPF/CNPJ):</label>
+    <input type="text" id="document" name="document" required><br><br>
+
+    <label for="userType">Tipo de Usuário:</label>
+    <select id="userType" name="userType">
+        <option value="COMMON">Cliente</option>
+        <option value="COMPANY">Empresa</option>
+    </select><br><br>
+
+    <input type="submit" value="Criar Usuário">
+</form>
+</body>
+</html>
